@@ -1,18 +1,18 @@
 // Get references to the textarea, character count, and custom popup elements
-var textarea = document.getElementById('myTextarea');
-var charCount = document.getElementById('charCount');
-var charRemaining = document.getElementById('charRemaining');
-var customPopup = document.getElementById('customPopup');
-var closePopupButton = document.getElementById('closePopup');
+let textarea = document.getElementById('myTextarea');
+let charCount = document.getElementById('charCount');
+let charRemaining = document.getElementById('charRemaining');
+let customPopup = document.getElementById('customPopup');
+let closePopupButton = document.getElementById('closePopup');
 
 // Set the maximum character limit
-var maxCharacters = 149; // Change this to your desired character limit
+let maxCharacters = 149; // Change this to your desired character limit
 
 // Add an event listener to the textarea
 textarea.addEventListener('input', function () {
   // Get the current text and its length
-  var text = textarea.value;
-  var textLength = text.length;
+  let text = textarea.value;
+  let textLength = text.length;
 //   console
   console.log(textLength);
 
@@ -20,7 +20,7 @@ textarea.addEventListener('input', function () {
   charCount.textContent = 'Total characters: ' + textLength;
 
   // Calculate the remaining characters
-  var remainingCharacters = maxCharacters - textLength;
+  let remainingCharacters = maxCharacters - textLength;
 
   // Update the character remaining element
   charRemaining.textContent = 'Characters remaining: ' + remainingCharacters;
